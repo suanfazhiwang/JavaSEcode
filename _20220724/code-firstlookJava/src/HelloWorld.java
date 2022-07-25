@@ -11,7 +11,11 @@ public class HelloWorld {
         System.out.println(10);//10.sout
         System.out.println("hello");//"hello".sout
         //fori  直接for循环
+        int a = 10;
+        int b = 20;
+        System.out.println(a+b);
 
-        }
+
     }
 }
+
