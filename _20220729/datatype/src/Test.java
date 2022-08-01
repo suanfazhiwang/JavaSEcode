@@ -120,7 +120,7 @@ public class Test {
         b = a;
     }
 
-    public static void main(String[] args) {
+    public static void upmain(String[] args) {
 //        不同类型的数据之间相互运算时，数据类型小的会被提升到数据类型大的。
 
         int a = 10;
@@ -132,5 +132,38 @@ public class Test {
         //byte c1 = a + b;   当你参与运算的数据小于四个字节的时候会进行提升为4个字节的int
         int c1 = a1+b1;
         System.out.println(c1);
+    }
+
+    public static void main3(String[] args) {
+        String s1 = "hello";//定义字符串   Java字符串不以\0为止
+        String s2 = "world";
+        System.out.println(s1);
+        int a = 10;
+        int b = 20;
+        System.out.println(a+b);
+        //当字符串和整数在一起使用+ 号的时候，就是个拼接的意思
+        System.out.println("a:"+a + "b:"+b);
+        System.out.println("a:"+a + b);//a:1020没有加起来的原因在于”a:“+a后还是一个字符串类型
+        System.out.println(a + b + "aaa");//30aaa   遇到字符串才拼接
+        System.out.println(s1+s2);
+
+
+    }
+
+    public static void main4(String[] args) {
+        int a = 10;
+        String str = a + "";
+        System.out.println(str);
+        //借助方法
+        String ret = String.valueOf(10);//把整数传化为字符串   String.valurof   可以把别的类型转化为字符串类型
+
+        System.out.println(ret);
+
+    }
+
+    public static void main(String[] args) {
+        String str = "1234";
+        int a = Integer.parseInt(str);
+        System.out.println(a+1);
     }
 }
