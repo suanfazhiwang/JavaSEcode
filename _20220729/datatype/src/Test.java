@@ -22,6 +22,9 @@ import org.omg.IOP.TAG_RMI_CUSTOM_MAX_STREAM_FORMAT;
  * float  单精度浮点数4    double  双精度浮点数8
  * char  字符类型2
  * boolean  布尔类型没明确规定大小
+ * 包装类:基本的数据类型对应的包装类型（类类型）
+ * byte   Byte    short  Short    int  Integer    long  Long
+ * float  Float    double  Double    boolean  Boolean    char  Charater
  * 2. 引用数据类型
  *
  */
@@ -55,8 +58,6 @@ public class Test {
         System.out.println(a1);
         System.out.println(a2);
         //int c = 2147483648;   会报错当赋值的字面值，大于 这个变量能保存的最大值的时候程序会编译报错
-
-
     }
 
     public static void mainlong(String[] args) {
@@ -135,7 +136,7 @@ public class Test {
     }
 
     public static void main3(String[] args) {
-        String s1 = "hello";//定义字符串   Java字符串不以\0为止
+        String s1 = "hello";//定义字符串   Java字符串不以\0为止     引用类型
         String s2 = "world";
         System.out.println(s1);
         int a = 10;
