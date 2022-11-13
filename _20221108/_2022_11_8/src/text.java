@@ -9,6 +9,53 @@ import java.util.Scanner;
  */
 public class text {
     public static void main(String[] args) {
+        double count = 0;
+        for (int i = 1; i < 101; i++) {
+            if (i%2 == 0) {
+                count -= 1.0 / i;
+            }
+            else {
+                count += 1.0 / i;
+            }
+        }
+        System.out.println(count);
+
+    }
+    public static void main8(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 2; i < n/2; i++) {
+            if (n % i == 0){
+                break;
+            }
+            if (i == n/2-1){
+                System.out.println("是素数");
+            }
+        }
+    }
+    public static void main7(String[] args) {
+        for (int i = 1000; i <= 2000; i++) {
+            if ((i % 100 != 0) && (i % 4 == 0)){
+                System.out.println(i + "是闰年");
+            } else if (i % 400 == 0) {
+                System.out.println(i + "是闰年");
+
+
+            }
+        }
+    }
+    public static void main6(String[] args) {
+        for (int i = 0; i < 101; i++) {
+            if(i % 10 == 9){
+                System.out.println(i);
+            } else if (i / 10 == 9) {
+                System.out.println(i);
+
+            }
+
+        }
+    }
+    public static void main5(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         for (int i = 31; i >= 1; i-=2) {
@@ -81,19 +128,20 @@ public class text {
     public static void main1(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        for (int j = 1; j <= n; j++) {
-            int i = 2;
+        int i =2;
+//        for (int j = 1; j <= n; j++) {
+//            int i = 2;
 
             //这里是java开根号的操作
-            for (; i <= Math.sqrt(j); i++) {
-                if (j % i == 0) {
+            for (i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
 
                     break;
                 }
             }
-            if (i > Math.sqrt(j)){
-                System.out.println(j + "是素数!");
-            }
+            if (i > Math.sqrt(n)){
+                System.out.println(n + "是素数!");
+//            }
         }
     }
 }
