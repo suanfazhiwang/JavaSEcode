@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -8,6 +10,9 @@ import java.util.Scanner;
  * Time: 11:14
  */
 public class test {
+
+
+
     public static void main1(String[] args) {
         /*Scanner scanner = new Scanner(System.in);
         System.out.printf("请输入一个整数：");
@@ -126,7 +131,7 @@ public class test {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main8(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();     //用户输入的整数
 
@@ -142,6 +147,27 @@ public class test {
             System.out.print(num>>i&1);
         }
 
+    }
+
+    //创建并初始化数组为1到100
+    public static void main9(String[] args) {
+        int[] array = new int[100];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i+1;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
+    //实现一个方法以数组为参数循环访问数组中的每个元素来打印每个元素的值
+    public static void main(String[] args) {
+        int[] array = new int[100];
+        printArray(array);
+    }
+
+    public static void printArray(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i] + " ");
+        }
     }
 }
 
