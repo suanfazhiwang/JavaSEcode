@@ -25,7 +25,28 @@ import java.util.Arrays;
  *
  */
 public class test {
+    public static void func1(int[] array){
+        array = new int[]{15,16,17};//给形参的引用赋了新值  不会 影响实参
+        //知识改变了形参的指向  并没有改变实参的指向
+        //new   就使引用指向一个新的地址   和以前的地址无关
+    }
+
+    public static void func2(int[] array){
+        array[0] = 999;
+        //因为此时传递的是引用  通过引用修改了原来的值
+    }
+
     public static void main(String[] args) {
+        int[] array1 = {1,2,3,4};
+        func1(array1);
+        System.out.println(Arrays.toString(array1));//1 2 3 4
+
+        func2(array1);
+        System.out.println(Arrays.toString(array1));//999 2 3 4
+//      这个感觉好像是   都是传址
+
+    }
+    public static void main5(String[] args) {
         int[] array1 = {1,2,3,4};
         int[] array2 = {11,22,33,44};
 
@@ -40,7 +61,7 @@ public class test {
         int[] array1 = {1,2,3,4};
         array1[0] = 99;
 
-        int[] array2 = array1;
+        int[] array2 = array1;//代表array2这个引用指向了array1这个引用所指向的对象
         array2[0] = 100;
 
         System.out.println(Arrays.toString(array1));//100 2 3 4
