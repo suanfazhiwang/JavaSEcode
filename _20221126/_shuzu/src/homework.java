@@ -16,6 +16,22 @@ import java.util.Arrays;
  *
  */
 public class homework {
+    //判断数组中是否存在连续三个奇数  存在 true  不存在 false
+    public static boolean fun3(int[] array){
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] % 2 != 0){
+                count++;
+                if (count == 3){
+                    return true;
+                }
+            }else {
+                count = 0;
+            }
+        }
+        return false;
+    }
+
     //给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
     public static int findMoreNum(int[] array) {
         int count = 0;
@@ -32,6 +48,9 @@ public class homework {
             }
         }
         return tmp;
+
+        //或者可以排序  中间的那个数就是所求
+
     }
 
     public static void main(String[] args) {
