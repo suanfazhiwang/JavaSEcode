@@ -36,12 +36,14 @@ abstract class Shape{
     }
 }
 class Rect extends Shape{
+
+    public void wangwang(){
+        System.out.println("wangwang");
+    }
+
     @Override
     public void draw() {
         System.out.println("画矩形");
-    }
-    public void wangwang(){
-        System.out.println("wangwang");
     }
 }
 class Cycle extends Shape{
